@@ -84,3 +84,4 @@ jobs:
 
     - name: Generate coverage report
       run: coverage report -m
+      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm/tests/unit/modules/dcnm

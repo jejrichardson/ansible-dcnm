@@ -72,3 +72,6 @@ jobs:
     - name: Install the collection tarball
       run: ansible-galaxy collection install .cache/collection-tarballs/*.tar.gz
 
+    - name: Run DCNM Unit tests
+      run: ansible-test units --docker -v --color --truncate 0 --coverage
+      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm

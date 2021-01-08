@@ -83,5 +83,5 @@ jobs:
         PYTHONPATH: /home/runner/.ansible/collections
 
     - name: Generate coverage report
-      run: coverage report -m
+      run: coverage report
       working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm

@@ -76,12 +76,12 @@ jobs:
       run: ansible-galaxy collection install .cache/collection-tarballs/*.tar.gz
 
     - name: Run DCNM Unit tests
-      run: coverage run --source=. -m pytest . -vvvv
+      run: coverage run --source=. -m pytest tests/unit/modules/dcnm/. -vvvv
       #run: ansible-test units --docker -v --color --truncate 0 --coverage
-      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm/tests/unit/modules/dcnm
+      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm
       env:
         PYTHONPATH: /home/runner/.ansible/collections
 
     - name: Generate coverage report
       run: coverage report -m
-      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm/tests/unit/modules/dcnm
+      working-directory: /home/runner/.ansible/collections/ansible_collections/cisco/dcnm
